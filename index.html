@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="./game-mouse.js"></script>
   <style>
     #cells {
       display: flex;
@@ -37,12 +39,17 @@
       border-left-color: #000;
     }
     
+    .left.initial {
+      border-left-color: white !important;
+    }
+    
     .right {
       border-right-color: #000;
     }
     
     .rat {
       background: orange!important;
+      height: 20px;
     }
   </style>
 </head>
@@ -50,7 +57,9 @@
 <body>
   <div id="cells">
     <div class="row">
-      <div class="top cell"></div>
+      <div class="top cell initial left">
+        <div class="rat"></div>
+      </div>
       <div class="top bottom right cell"></div>
       <div class="top left cell"></div>
       <div class="top bottom cell"></div>
